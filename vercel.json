@@ -2,8 +2,16 @@
 {
   "rewrites": [
     {
-      "source": "/:path*",
-      "destination": "/api/:path*"
+      "source": "/manifest.json",
+      "destination": "/api/manifest/manifest/manifest"
+    },
+    {
+      "source": "/catalog/:type/:id.json",
+      "destination": "/api/catalog/:type/:id"
+    },
+    {
+      "source": "/meta/:type/:id.json",
+      "destination": "/api/meta/:type/:id"
     }
   ]
 }
