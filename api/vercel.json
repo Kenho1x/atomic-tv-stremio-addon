@@ -1,3 +1,17 @@
+
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/api/$1" }]
+  "rewrites": [
+    {
+      "source": "/manifest.json",
+      "destination": "/api/manifest"
+    },
+    {
+      "source": "/catalog/:type/:id.json",
+      "destination": "/api/catalog/:type/:id"
+    },
+    {
+      "source": "/meta/:type/:id.json",
+      "destination": "/api/meta/:type/:id"
+    }
+  ]
 }
